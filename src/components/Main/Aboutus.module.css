@@ -1,0 +1,68 @@
+.aboutus__wrapper{
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem ;
+    text-align: left;
+}
+.about_us{
+  width: 50%;
+  padding: 0, 5rem;
+}
+
+.about_us h1{
+ font-size: 2rem;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ border-bottom: 1px solid black;
+ padding-left: 10px;
+}
+
+.about_us p{
+ font-size: 1rem;
+}
+
+.our_service{
+  text-align: center;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.our_service h4{
+  margin-bottom: 0;
+}
+.icons__wrapper{
+  display: flex;
+  flex-direction: row;
+  padding-top: 2rem;
+  justify-content: space-between;
+  text-align: center;
+  width: 80%;
+  margin-left: 10%;
+}
+
+
+.wrapper{
+    height: 200px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    text-align: center;
+    margin: auto;
+
+}
+.wrapper:hover{
+  box-shadow: 1px 1px 1px 1px black;
+}
+
+.img__container{
+  height: 50px;
+}
+.img__container img{
+  height: 50px;
+  width: 50px;
+}
+.content h3{
+ font-size: 0.8rem;
+}
