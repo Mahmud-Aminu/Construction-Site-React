@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import SocialIcons from "../UI/SocialIcons";
+import Button from "../UI/Button";
 import "./Navigation.css";
 
-export default function Navigation() {
+export default function Navigation(props) {
   const [isActive, setIsActive] = useState("nav__menu");
   const [isToggler, setIsToggler] = useState("burger");
 
@@ -15,15 +17,15 @@ export default function Navigation() {
       : setIsToggler("burger");
   };
 
+  const closeNavBraHAndle = () => {
+    setIsActive("nav__menu");
+    setIsToggler("burger");
+  };
+
   return (
     <nav className="nav">
       <div className="header">
-        <img
-          className="img"
-          src={process.env.PUBLIC_URL + "/icon2.jpg"}
-          alt=""
-        />
-        <h1>Mantsolha</h1>
+        <img src={process.env.PUBLIC_URL + "/micon2.png"} alt="" />
       </div>
       <div className="action">
         <div>
@@ -32,13 +34,25 @@ export default function Navigation() {
 
         <ul className={isActive}>
           <li>
-            <a href="/">Home</a>
+            <Link to="/" onClick={closeNavBraHAndle}>
+              Home
+            </Link>
           </li>
           <li>
-            <a href="/">About</a>
+            <Link to="/about" onClick={closeNavBraHAndle}>
+              About
+            </Link>
           </li>
           <li>
-            <a href="/">Contact</a>
+            <Button
+              className="btn"
+              onClick={() => {
+                props.onContactView();
+                closeNavBraHAndle();
+              }}
+            >
+              Contact
+            </Button>
           </li>
         </ul>
 

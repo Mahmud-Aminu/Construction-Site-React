@@ -1,37 +1,29 @@
 .nav {
-    position: fixed;
+    position: fixed !important;
     overflow: hidden;
     z-index: 99;
     top: 0;
     left: 0;
     width: 100%;
-    height: 2rem;
+    height: 2rem !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color:rgba(255, 255, 255, 0.986);
     margin: 0;
     border-bottom: 2px solid #fff;
-    box-shadow: 0 2px 4px rgba(109, 36, 36, 0.26);
-    padding: 1.5rem 0;
-    color: #014902
+    box-shadow: 0 2px 4px  rgba(0,0,0,0.5);
+    padding: 1.5rem 0 !important;
+    color: #014902;
+    font-family: Roboto, sans-serif;
 }
   
-.header .img{
-    width: 45px;
-    height: 45px;
+.header img{
+    width: 200px;
     margin-bottom: 0;
 }
 .header{
-  text-align: center;
-  padding-left: 7px;
-
-}
-.header h1{
-  padding: 0;
-   margin: 0;
-  font-size: 0.8rem;
-
+ padding-left: 7px;
 }
 .action{
   position: relative;
@@ -72,21 +64,27 @@
   .burger div{
     width:25px;
     height: 3px;
-    background-color: rgb(0, 0, 0);
+    background-color: #014902;
     margin: 5px;
     transition: all 0.3s ease;
   }
-
+.btn{
+  background-color:rgba(255, 255, 255, 0.986);
+  border: none;
+  color:#014902;
+  font-size: 16px;
+}
   @media screen and (max-width : 768px){
    .nav{
     height: 1.5rem;
    }
     .nav__menu{
       position: fixed;
+      right:0%;
       z-index: -99;
-      height: 80vh;
+      height: 100%;
       top: 0;
-      background-color: rgba(250, 250, 250, 0.979);;
+      background-color: rgba(255, 255, 255, 0.986);
       display: flex;
       flex-direction: column;
       justify-content:center;
@@ -97,26 +95,26 @@
 
     }
     
-    .header .img{
-      width: 25px;
-      height: 25px;
-      margin-bottom: 0;
+    .header img{
+      width: 150px;
+      padding-top: 30px;
   }
 
 
-    .nav__menu a {
-       color: #fff
-    }
-    
+  
     .nav__menu li{
       opacity: 1;
       padding: 20px;
       animation-name: navLinkFade;
+      animation-duration: 4s;
+  
     }
     .burger{
       display: block;
     }
   }
+
+  
 
 
 
@@ -147,4 +145,16 @@
   transform: rotate(45deg) translate(-5px,-6px);
   }  
   
-  
+  @media screen and (max-width: 370px){
+    .header img{
+      width: 110px;
+      height: 40px;
+  }
+  }
+
+  /* @media screen and (max-width: 300px){
+    .header img{
+      width: 90px;
+      height: 30px;
+  }
+  } */

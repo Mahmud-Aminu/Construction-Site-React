@@ -1,0 +1,127 @@
+.aboutus__wrapper{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 10px;
+    color:#014902;
+   
+}
+.aboutus__wrapper p{
+   margin: 4px;
+   font-size: 20px;
+  font-weight: normal;
+ }
+
+.about_us{
+  width: 50%;
+  margin: 0, 5rem;
+  text-align: justify;
+}
+
+.about_us h1{
+ font-size: 2rem;
+ border-bottom: 2px solid #014902;
+ padding-left: 10px;
+ width: 30%;
+}
+
+
+
+.our_service{
+  text-align: center;
+  width: 100%;
+
+}
+
+.our_service h4{
+  font-size: 1.5rem;
+  border-bottom: 2px solid #014902;
+  padding-left: 10px;
+  width: 20%;
+  text-align: left;
+}
+
+.icons__wrapper{
+  display: flex;
+  flex-direction: row;
+  padding-top: 2rem;
+  justify-content: space-between;
+  text-align: center;
+  width: 80%;
+  margin:0 10%;
+}
+@media screen and (max-width: 920px) {
+  .about_us{
+    width: 70%;
+    padding: 5px;
+    margin: 0;
+    text-align: left;
+
+  }
+  .about_us h1{
+    width: 27%;
+  }
+  .our_service h4{
+    width: 20%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about_us{
+    width: auto;
+    /* padding: 10px; */
+    margin: 0;
+
+  }
+  .about_us h1{
+width: 12%;
+  }
+  .aboutus__wrapper h1{
+    font-size: 1rem;
+  }
+  .aboutus__wrapper p{
+    font-size: 16px;
+  }
+
+  .our_service h4{
+    font-size: 0.8rem;
+    width: 12%;
+  }
+  
+  .icons__wrapper{
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 660px){
+  .about_us h1{
+    width: 17%;
+  }
+  .our_service h4{
+    width: 18%;
+  }
+}
+@media screen and (max-width: 540px){
+  .about_us h1{
+    width: 17%;
+  }
+  .our_service h4{
+    width: 18%;
+  }
+}
+@media screen and (max-width: 450px){
+  .about_us h1{
+    width: 21%;
+  }
+  .our_service h4{
+    width: 23%;
+  }
+}
+@media screen and (max-width: 360px){
+  .about_us h1{
+    width: 30%;
+  }
+  .our_service h4{
+    width: 30%;
+  }
+ 
+}
+

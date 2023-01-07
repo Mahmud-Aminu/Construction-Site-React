@@ -5,26 +5,46 @@ import {
   Twitter,
   WhatsApp,
 } from "@mui/icons-material";
-import { IconButton } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const SocialIcons = () => {
   return (
     <>
-      <IconButton>
+      <a
+        href="https://facebook.com/D9icedesignbuild"
+        target="_blank"
+        rel="noreferrer"
+        style={{ padding: "5px" }}
+      >
         <Facebook color="primary" fontSize="small" />
-      </IconButton>
-      <IconButton>
+      </a>
+      <a
+        href="https://twitter/manstolha?s=21&t=_d6q65GB0GOqkwNwnUV5hw"
+        target="_blank"
+        rel="noreferrer"
+        style={{ padding: "5px" }}
+      >
         <Twitter color="primary" fontSize="small" sx={{ color: "#00ACEE" }} />
-      </IconButton>
-      <IconButton>
+      </a>
+      <Link to="/" style={{ padding: "5px" }}>
         <Instagram color="primary" fontSize="small" sx={{ color: "#E4405F" }} />
-      </IconButton>
-      <IconButton>
-        <LinkedIn color="primary" sx={{ color: "#0072b1" }} />
-      </IconButton>
-      <IconButton>
+      </Link>
+      <a
+        href="https://linkedin.com/company/mantsolha-associates-concept/"
+        target="_blank"
+        rel="noreferrer"
+        style={{ padding: "5px" }}
+      >
+        <LinkedIn color="primary" fontSize="small" sx={{ color: "#03472c" }} />
+      </a>
+      <a
+        href="https://wa.me/message/5VYNMLCEJALFN1"
+        target="_blank"
+        rel="noreferrer"
+        style={{ padding: "5px" }}
+      >
         <WhatsApp color="primary" fontSize="small" sx={{ color: "#25d366" }} />
-      </IconButton>
+      </a>
     </>
   );
 };

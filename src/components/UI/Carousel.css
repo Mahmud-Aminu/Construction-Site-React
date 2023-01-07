@@ -1,4 +1,21 @@
-.carousal img{
-    width: 250px;
-    height: 250px
+
+.carousel .thumb img{
+    width: 100% !important;
+   height:100% !important;
+  
+}
+
+.slide img{
+    max-height: 500px;
+    width: auto;
+}
+@media  screen and (max-width: 720px) {
+    
+}
+
+@media screen and (max-width: 768px){
+    .slide img{
+        max-height: 240px;
+        width: auto;
+    } 
 }

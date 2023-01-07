@@ -1,0 +1,116 @@
+.contact{
+    top: 10vh;
+background:#03472C;
+width: 100%;
+margin:0;
+padding: 50px 0;
+}
+.contact_Header h3{
+    color:#fff;
+    font-size: 16px;
+    font-weight: normal;
+    width: 60%;
+    margin: auto;
+    padding: 0 5px 10px;
+}
+
+.wrapper{
+    display:flex;
+    flex-direction: row;
+    width:80%;
+    height: auto;
+    padding: 30px;
+    background-color: #fff;
+    margin: auto;
+    color: #03472C;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 0px rgb(0, 0, 0,0.5);
+    -webkit-box-shadow: 10px 10px 5px 0px rgb(0, 0, 0,0.5);
+    -moz-box-shadow:10px 10px 5px 0px rgb(0, 0, 0,0.5);
+}
+.wrapper hr{
+    color: #03472c;
+}
+
+.contents{
+    width: 50% ;
+}
+.contents h1{
+    color:#014902;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-left: 5px;
+    border: 1px solid #03472C;
+    box-sizing: border-box;
+    width:40%;
+    padding:5px 10px;
+}
+
+.contents p{
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+.formWrapper{
+   width: 50%;
+  
+}
+
+@media screen and (max-width : 910px) {
+    
+    .contents h1{
+         width: 150px;
+   }
+}
+@media screen and (max-width: 768px) {
+    .contact_Header h3{
+        width: 90%;
+        
+    }
+    .contact{
+        padding: 15px 0;
+    }
+    .wrapper{
+        flex-direction: column;
+    }
+    .contents{
+        width: 100%;
+       
+    }
+    .formWrapper{
+        width: 100%;
+    }
+    .contents h1{
+        width: 140px;
+    }
+    .contact_Modal h5{
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width:370px) {
+    .section_one h1{
+        width: 25%;
+        
+    }
+    .section_two h1{
+        width: 30%;
+       
+    }
+    .service h1{
+        width: 25%;
+    
+    }
+    .contents p{
+        font-size:14px;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .contents p{
+        font-size: 12px;
+    }
+}

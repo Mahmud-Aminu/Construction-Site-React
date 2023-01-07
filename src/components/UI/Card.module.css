@@ -1,0 +1,29 @@
+.card{
+    height: 200px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    text-align: center;
+    margin: auto;
+}
+
+.image{
+    height: 50px;
+}
+.wrapper:hover{
+    box-shadow: 1px 1px 1px 1px black;
+  }
+  
+.image img{
+    height: 50px;
+    width: 50px; 
+}
+
+.content p{
+    text-align: center;
+}
+
+
+
+  

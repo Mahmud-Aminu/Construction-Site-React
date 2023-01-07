@@ -1,11 +1,14 @@
 import React from "react";
 import Navigation from "./Navigation.jsx";
 
-const Header = () => {
+const Header = (props) => {
   return (
-    <div>
-      <Navigation />
-    </div>
+    <>
+      <Navigation
+        scrollProjectView={props.scrollProjectView}
+        onContactView={props.onContactView}
+      />
+    </>
   );
 };
 

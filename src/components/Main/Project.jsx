@@ -1,19 +1,19 @@
 import React from "react";
-import { ConstructionCarousel, DesignCarousel } from "../UI/Carousel";
+import DesignCarousel from "../UI/Carousel";
+
 import "./Project.css";
 
-const Project = () => {
+const Project = (props) => {
   return (
     <div className="project_container">
-      <h4>Features Projects</h4>
+      <h1>Features Projects</h1>
       <p>
         No matter the task, we're dedicated to finding solution that works for
-        everyone while attaining result,here are afew project that we've the
-        privilege to work on
+        everyone while attaining result, here are a few project that we've the
+        privilege to work on.
       </p>
       <div className="carousal_container">
         <DesignCarousel />
-        <ConstructionCarousel />
       </div>
     </div>
   );

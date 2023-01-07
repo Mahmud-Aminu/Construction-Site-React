@@ -1,12 +1,13 @@
 .main-footer{
-    color: #fff;
-    background-color: rgb(3, 3, 14);
+    color:  #014902;
+    background-color: rgba(255, 255, 255, 0.986);
     position: relative;
     bottom: 0;
     width: 100%;
     text-align: center;
     border-top: 2px solid #fff;
-    box-shadow: 0 2px 4px rgba(109, 36, 36, 0.26);
+    box-shadow: 0 -5px 5px -5px rgb(255, 255, 255);
+    
 }
 .container{
     position: relative;
@@ -16,21 +17,28 @@
     left: 10%;
    
 }
+
 .row{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+   
 }
-
+.row img{
+    max-width: 25px;
+    
+}
 .col{
-    width: 45%;
-    text-align: center;
+    width: 60%;
     padding: 0, 1rem;
+    text-align: center;
+
+}
+.col2{
+    margin: auto;
 }
 .col h4{
     font-size: 1rem;
-    margin-bottom: 0;
-    
+    margin-bottom: 0; 
 }
 
 .col p{
@@ -42,12 +50,17 @@
     opacity: 1;
     list-style: none;
     list-style-type: none;
-    padding: 0;
+    padding: 10px 0 0;
+    margin:auto;
+    display: flex;
 }
-
+.list li{
+    margin-left:10px ;
+}
 .list a{
-    text-decoration: none; 
-    color: #fff;
+    text-decoration:solid;
+    color:  #014902;
+   
 }
 .separator{
     width: 100%;
@@ -57,7 +70,7 @@ span {
     font-style: italic;
 }
 
-@media screen and (max-width : 550px) {
+@media screen and (max-width : 768px) {
     .col h4{
         font-size: 0.7rem;
     }
@@ -66,5 +79,8 @@ span {
     }
     .row{
         font-size: 0.7rem;
+    }
+    .col{
+        width: 100%;
     }
 }
