@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mantsolhaassociates.com.ng/sitemap.xml

@@ -1,0 +1,15 @@
+/* ============================================
+   MANTSOLHA ASSOCIATES — APP LAYOUT
+   ============================================ */
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.App main {
+  flex: 1;
+}

@@ -1,0 +1,32 @@
+/* ============================================
+   PROJECTS SECTION — Dark Container Wrapper
+   ============================================ */
+
+.project-section {
+  background-color: var(--color-bg-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-header {
+  margin-bottom: var(--space-4xl);
+}
+
+.project-header .section-label {
+  color: var(--color-primary-light);
+}
+
+.project-header .section-label::before {
+  background: var(--color-primary-light);
+}
+
+.carousel-wrapper {
+  max-width: var(--container-lg);
+  margin: 0 auto;
+}
+
+/* Override styling of third party slider component default styling if any */
+.carousel .control-dots {
+  padding-left: 0;
+  margin: 0;
+}

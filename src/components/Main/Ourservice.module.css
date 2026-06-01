@@ -1,0 +1,129 @@
+/* ============================================
+   SERVICES — Premium Service Cards
+   ============================================ */
+
+.services {
+  position: relative;
+}
+
+.header {
+  margin-bottom: var(--space-4xl);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-slow);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(15, 81, 50, 0.15);
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+.cardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(15, 81, 50, 0.06), rgba(46, 125, 50, 0.06));
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+  transition: all var(--transition-base);
+}
+
+.card:hover .cardIcon {
+  background: var(--color-primary);
+  color: white;
+  transform: scale(1.05);
+}
+
+.cardTitle {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+}
+
+.cardDescription {
+  font-size: var(--fs-body-sm);
+  color: var(--color-text-muted);
+  line-height: var(--lh-relaxed);
+  flex: 1;
+  margin-bottom: var(--space-lg);
+}
+
+.cardCta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all var(--transition-fast);
+}
+
+.cardCta:hover {
+  gap: var(--space-sm);
+  color: var(--color-primary-dark);
+}
+
+.cardCta svg {
+  transition: transform var(--transition-fast);
+}
+
+.cardCta:hover svg {
+  transform: translateX(4px);
+}
+
+/* ---- Responsive ---- */
+@media screen and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: var(--space-xl);
+  }
+}
