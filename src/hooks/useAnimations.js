@@ -1,11 +1,12 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 /**
  * Custom hook for Intersection Observer-based scroll reveal animations.
  * Adds 'revealed' class to elements when they enter the viewport.
  */
-export function useScrollReveal(options = {}) {
-  const ref = useRef(null);
+export function useScrollReveal(options = {}, externalRef = null) {
+  const internalRef = useRef(null);
+  const ref = externalRef || internalRef;
 
   useEffect(() => {
     const element = ref.current;
@@ -15,20 +16,20 @@ export function useScrollReveal(options = {}) {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
+            entry.target.classList.add("revealed");
             observer.unobserve(entry.target);
           }
         });
       },
       {
         threshold: options.threshold || 0.1,
-        rootMargin: options.rootMargin || '0px 0px -50px 0px',
-      }
+        rootMargin: options.rootMargin || "0px 0px -50px 0px",
+      },
     );
 
     // Observe the container and all reveal children
     const revealElements = element.querySelectorAll(
-      '.reveal, .reveal-left, .reveal-right, .reveal-scale'
+      ".reveal, .reveal-left, .reveal-right, .reveal-scale",
     );
 
     revealElements.forEach((el) => observer.observe(el));
@@ -36,7 +37,7 @@ export function useScrollReveal(options = {}) {
     return () => {
       revealElements.forEach((el) => observer.unobserve(el));
     };
-  }, [options.threshold, options.rootMargin]);
+  }, [options.threshold, options.rootMargin, ref]);
 
   return ref;
 }
@@ -63,7 +64,7 @@ export function useCountUp(target, duration = 2000) {
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     observer.observe(element);

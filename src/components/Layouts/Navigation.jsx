@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import "./Navigation.css";
 
-const logo = process.env.PUBLIC_URL + "/micon2.png";
+const logo = "/micon2.png";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);

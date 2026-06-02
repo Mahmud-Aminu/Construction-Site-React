@@ -4,10 +4,10 @@ import classes from "./Contact.module.css";
 import ContactForm from "../UI/ContactForm";
 
 const Contact = ({ cRef }) => {
-  const sectionRef = useScrollReveal();
+  const sectionRef = useScrollReveal({}, cRef);
 
   return (
-    <section className={`section ${classes.contactSection}`} id="contact" ref={cRef || sectionRef}>
+    <section className={`section ${classes.contactSection}`} id="contact" ref={sectionRef}>
       <div className="container">
         <div className={classes.wrapper}>
           {/* Left Column: Info */}

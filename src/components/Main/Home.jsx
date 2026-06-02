@@ -2,7 +2,7 @@ import React from "react";
 import { useScrollReveal } from "../../hooks/useAnimations";
 import classes from "./Home.module.css";
 
-const heroBg = process.env.PUBLIC_URL + "/backgroung.jpg";
+const heroBg = "/backgroung.jpg";
 
 const Home = () => {
   const sectionRef = useScrollReveal();

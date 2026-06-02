@@ -13,10 +13,10 @@ function App() {
       <a href="#hero" className="skip-to-content">
         Skip to main content
       </a>
-      
       <Navigation />
       <Main cRef={contactRef} />
       <Footer />
+
     </div>
   );
 }
