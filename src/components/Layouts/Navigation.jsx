@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import "./Navigation.css";
 
 const logo = "/micon2.png";
+const logo2 = "/micon.png"
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -53,6 +54,7 @@ export default function Navigation() {
     { label: "About", id: "about" },
     { label: "Services", id: "services" },
     { label: "Projects", id: "projects" },
+    { label: "Gallery", id: "gallery" },
     { label: "Team", id: "team" },
     { label: "Contact", id: "contact" },
   ];
@@ -60,18 +62,29 @@ export default function Navigation() {
   return (
     <header className={`nav-header ${isScrolled ? "nav-scrolled" : ""}`}>
       <nav className="nav-container" aria-label="Main navigation">
-        <a
-          href="#hero"
-          className="nav-logo"
-          onClick={(e) => {
-            e.preventDefault();
-            scrollToSection("hero");
-          }}
-          aria-label="Mantsolha Associates - Go to homepage"
-        >
-          <img src={logo} alt="Mantsolha Associates Concept Ltd" />
-        </a>
-
+        {isScrolled ?
+          <a
+            href="#hero"
+            className="nav-logo"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("hero");
+            }}
+            aria-label="Mantsolha Associates - Go to homepage"
+          >
+            <img src={logo} alt="Mantsolha Associates Concept Ltd" />
+          </a>
+          : <a
+            href="#hero"
+            className="nav-logo"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("hero");
+            }}
+            aria-label="Mantsolha Associates - Go to homepage"
+          >
+            <img src={logo2} alt="Mantsolha Associates Concept Ltd" />
+          </a>}
         <ul className={`nav-links ${isMobileMenuOpen ? "nav-links--open" : ""}`}>
           {navLinks.map((link) => (
             <li key={link.id}>

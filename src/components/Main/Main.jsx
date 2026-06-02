@@ -3,6 +3,7 @@ import Home from "./Home";
 import WhyChooseUs from "./WhyChooseUs";
 import { Ourservice } from "./Ourservice";
 import Project from "./Project";
+import Gallery from "./Gallery";
 import Statistics from "./Statistics";
 import Process from "./Process";
 import Teams from "./Teams";
@@ -21,6 +22,7 @@ const Main = ({ cRef }) => {
       <WhyChooseUs />
       <Ourservice />
       <Project />
+      <Gallery />
       <Statistics />
       <Process />
       <Teams />
