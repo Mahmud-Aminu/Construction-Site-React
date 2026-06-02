@@ -17,7 +17,6 @@ import img24 from "../../assets/gallery/IMG-20260602-WA0024.jpg";
 import img25 from "../../assets/gallery/IMG-20260602-WA0025.jpg";
 import img27 from "../../assets/gallery/IMG-20260602-WA0027.jpg";
 import img28 from "../../assets/gallery/IMG-20260602-WA0028.jpg";
-import img29 from "../../assets/gallery/IMG-20260602-WA0029.jpg";
 import img30 from "../../assets/gallery/IMG-20260602-WA0030.jpg";
 
 const galleryImages = [
@@ -40,7 +39,6 @@ const galleryImages = [
   { id: 17, src: img25, alt: "Construction milestone achievement", category: "Construction" },
   { id: 18, src: img27, alt: "Bridge and road infrastructure", category: "Infrastructure" },
   { id: 19, src: img28, alt: "Large-scale building project", category: "Construction" },
-  { id: 20, src: img29, alt: "Engineering consultation on site", category: "Engineering" },
   { id: 21, src: img30, alt: "Completed construction project", category: "Construction" },
 ];
 

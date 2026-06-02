@@ -1,5 +1,5 @@
 /* ============================================
-   TEAM SECTION — 3D CARD FLIP STYLES
+   TEAM SECTION — CARD & PROFILE MODAL STYLES
    ============================================ */
 
 .team {
@@ -16,82 +16,33 @@
   gap: var(--space-xl);
 }
 
-/* ---- 3D Card Container ---- */
-.cardContainer {
-  perspective: 1200px;
-  height: 460px;
-}
-
-.cardInner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-  transform-style: preserve-3d;
-}
-
-.cardInner.flipped {
-  transform: rotateY(180deg);
-}
-
-/* ---- Shared Face Styles ---- */
-.cardFront,
-.cardBack {
-  position: absolute;
-  inset: 0;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+/* ---- Card Style ---- */
+.card {
+  background: white;
   border-radius: var(--radius-xl);
-  overflow: hidden;
   border: 1px solid var(--color-border);
+  overflow: hidden;
+  transition: all var(--transition-slow);
   display: flex;
   flex-direction: column;
-}
-
-/* ---- FRONT FACE ---- */
-.cardFront {
-  background: white;
-  z-index: 2;
   box-shadow: var(--shadow-sm);
-  transition: box-shadow var(--transition-slow);
 }
 
-.cardContainer:hover .cardFront {
+.card:hover {
+  transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
+  border-color: rgba(15, 81, 50, 0.15);
 }
 
-/* ---- Front Top Area ---- */
-.frontTop {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-top: var(--space-2xl);
-  padding-bottom: var(--space-sm);
-  background: linear-gradient(160deg, rgba(15, 81, 50, 0.04), rgba(25, 135, 84, 0.08));
-  flex-shrink: 0;
-}
-
-/* ---- Circular Photo ---- */
+/* ---- Photo Area (Full Bleed Square) ---- */
 .imageWrapper {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  background-color: var(--color-bg-alt);
   flex-shrink: 0;
-  box-shadow:
-    0 0 0 3px white,
-    0 0 0 5px rgba(15, 81, 50, 0.12),
-    0 8px 24px rgba(15, 81, 50, 0.1);
-  transition: transform 0.5s cubic-bezier(0.4, 0.2, 0.2, 1),
-              box-shadow 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
-}
-
-.cardContainer:hover .imageWrapper {
-  transform: scale(1.06);
-  box-shadow:
-    0 0 0 3px white,
-    0 0 0 5px rgba(15, 81, 50, 0.2),
-    0 12px 28px rgba(15, 81, 50, 0.15);
 }
 
 .photo {
@@ -100,9 +51,14 @@
   object-fit: cover;
   object-position: center top;
   display: block;
+  transition: transform 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
-/* ---- Front Content ---- */
+.card:hover .photo {
+  transform: scale(1.06);
+}
+
+/* ---- Card Content ---- */
 .content {
   padding: var(--space-lg) var(--space-xl) var(--space-xl);
   flex: 1;
@@ -116,7 +72,7 @@
   font-size: var(--fs-h4);
   font-weight: var(--fw-bold);
   color: var(--color-text);
-  margin-bottom: 2px;
+  margin-bottom: 4px;
   line-height: var(--lh-tight);
 }
 
@@ -128,7 +84,7 @@
   line-height: var(--lh-normal);
 }
 
-/* ---- Social Icons (Front) ---- */
+/* ---- Social Icons ---- */
 .socials {
   display: flex;
   gap: var(--space-sm);
@@ -155,15 +111,15 @@
   transform: translateY(-2px);
 }
 
-/* ---- Learn More Button ---- */
-.learnMoreBtn {
+/* ---- View Profile Button ---- */
+.viewProfileBtn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--space-sm);
   width: 100%;
   padding: 10px var(--space-lg);
-  margin-top: var(--space-md);
+  margin-top: var(--space-lg);
   font-size: var(--fs-body-sm);
   font-weight: var(--fw-semibold);
   color: var(--color-primary);
@@ -175,7 +131,7 @@
   letter-spacing: var(--ls-wide);
 }
 
-.learnMoreBtn:hover {
+.viewProfileBtn:hover {
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
   color: white;
   border-color: var(--color-primary);
@@ -183,191 +139,218 @@
   box-shadow: 0 4px 12px rgba(15, 81, 50, 0.25);
 }
 
-.learnMoreBtn svg {
+.viewProfileBtn svg {
   transition: transform var(--transition-base);
 }
 
-.learnMoreBtn:hover svg {
+.viewProfileBtn:hover svg {
   transform: translateX(3px);
 }
 
-/* ---- BACK FACE ---- */
-.cardBack {
-  background: linear-gradient(165deg, #0a3d25, #0F5132 40%, #1a6b42);
-  transform: rotateY(180deg);
-  z-index: 1;
-  color: white;
-  padding: var(--space-xl);
-  box-shadow: var(--shadow-lg);
-  overflow-y: auto;
+/* ============================================
+   PROFILE MODAL INTERNAL STYLES
+   ============================================ */
+
+.modalContent {
+  position: relative;
+  padding: var(--space-2xl);
+  background: white;
 }
 
-/* Custom scrollbar on back face */
-.cardBack::-webkit-scrollbar {
-  width: 4px;
-}
-
-.cardBack::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
+.modalClose {
+  position: absolute;
+  top: var(--space-lg);
+  right: var(--space-lg);
+  color: var(--color-text-light);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-xs);
   border-radius: var(--radius-full);
-}
-
-.cardBack::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: var(--radius-full);
-}
-
-/* ---- Back Header ---- */
-.backHeader {
   display: flex;
   align-items: center;
-  gap: var(--space-md);
-  margin-bottom: var(--space-md);
+  justify-content: center;
+  transition: all var(--transition-base);
 }
 
-.backAvatar {
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-full);
+.modalClose:hover {
+  color: var(--color-primary);
+  background: var(--color-bg-alt);
+  transform: rotate(90deg);
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-lg);
+}
+
+.modalAvatar {
+  width: 90px;
+  height: 90px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 3px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
   flex-shrink: 0;
 }
 
-.backAvatar img {
+.modalAvatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
 }
 
-.backIdentity {
-  min-width: 0;
-}
-
-.backName {
-  font-size: var(--fs-body);
-  font-weight: var(--fw-bold);
-  color: white;
-  margin-bottom: 1px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.backRole {
-  font-size: var(--fs-caption);
-  font-weight: var(--fw-medium);
-  color: rgba(255, 255, 255, 0.65);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* ---- Back Divider ---- */
-.backDivider {
-  height: 1px;
-  background: linear-gradient(to right, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
-  margin-bottom: var(--space-md);
-}
-
-/* ---- Back Bio ---- */
-.backBioSection {
-  margin-bottom: var(--space-md);
+.modalIdentity {
   flex: 1;
 }
 
-.backSectionTitle {
-  font-size: var(--fs-caption);
+.modalName {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+
+.modalRole {
+  font-size: var(--fs-body);
   font-weight: var(--fw-semibold);
-  color: rgba(255, 255, 255, 0.5);
-  text-transform: uppercase;
-  letter-spacing: var(--ls-wider);
+  color: var(--color-primary);
   margin-bottom: var(--space-sm);
 }
 
-.backBio {
-  font-size: 0.8125rem;
-  line-height: var(--lh-relaxed);
-  color: rgba(255, 255, 255, 0.85);
-  margin: 0;
-}
-
-/* ---- Skill Tags ---- */
-.backSkills {
-  margin-bottom: var(--space-md);
-}
-
-.skillTags {
+.modalSocials {
   display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+  gap: var(--space-xs);
 }
 
-.skillTag {
-  display: inline-block;
-  padding: 3px 10px;
-  font-size: 0.6875rem;
-  font-weight: var(--fw-semibold);
-  color: rgba(255, 255, 255, 0.9);
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  letter-spacing: var(--ls-wide);
-  white-space: nowrap;
-}
-
-/* ---- Back Button ---- */
-.backBtn {
-  display: inline-flex;
+.modalSocials a {
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-sm);
-  width: 100%;
-  padding: 10px var(--space-lg);
-  font-size: var(--fs-body-sm);
-  font-weight: var(--fw-semibold);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-bg-alt);
+  color: var(--color-text-muted);
+  border: 1px solid transparent;
+  transition: all var(--transition-base);
+}
+
+.modalSocials a:hover {
+  background: var(--color-primary);
   color: white;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: var(--radius-lg);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.modalDivider {
+  height: 1px;
+  background-color: var(--color-border);
+  margin-bottom: var(--space-xl);
+}
+
+.modalBody {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-2xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.modalBioSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.modalSectionTitle {
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-bold);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wider);
+}
+
+.modalBio {
+  font-size: var(--fs-body);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-secondary);
+}
+
+.modalSkillsSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.modalSkills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.modalSkillTag {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+  background: rgba(15, 81, 50, 0.08);
+  border: 1px solid rgba(15, 81, 50, 0.12);
+  border-radius: var(--radius-full);
+  letter-spacing: var(--ls-wide);
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-lg);
+}
+
+.modalCloseBtn {
+  padding: 10px 24px;
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-bold);
+  color: var(--color-text-secondary);
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
   cursor: pointer;
   transition: all var(--transition-base);
-  letter-spacing: var(--ls-wide);
-  flex-shrink: 0;
 }
 
-.backBtn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.4);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+.modalCloseBtn:hover {
+  background-color: var(--color-border);
+  color: var(--color-text);
 }
 
-.backBtn svg {
-  transition: transform var(--transition-base);
-}
-
-.backBtn:hover svg {
-  transform: translateX(-3px);
-}
-
-/* ---- Responsive ---- */
+/* ============================================
+   RESPONSIVE
+   ============================================ */
 @media screen and (max-width: 1024px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .cardContainer {
-    height: 480px;
+@media screen and (max-width: 768px) {
+  .modalContent {
+    padding: var(--space-xl);
   }
 
-  .imageWrapper {
-    width: 100px;
-    height: 100px;
+  .modalHeader {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-md);
   }
 
-  .frontTop {
-    padding-top: var(--space-xl);
+  .modalBody {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
   }
 }
 
@@ -376,29 +359,5 @@
     grid-template-columns: 1fr;
     max-width: 400px;
     margin: 0 auto;
-  }
-
-  .cardContainer {
-    height: 480px;
-  }
-
-  .imageWrapper {
-    width: 80px;
-    height: 80px;
-  }
-
-  .frontTop {
-    padding-top: var(--space-lg);
-  }
-}
-
-/* ---- Reduced Motion ---- */
-@media (prefers-reduced-motion: reduce) {
-  .cardInner {
-    transition: none;
-  }
-
-  .cardInner.flipped {
-    transform: rotateY(180deg);
   }
 }
