@@ -46,7 +46,7 @@
 }
 
 .nav-scrolled .nav-logo img {
-  height: 48px;
+  height: 52px;
 }
 
 /* ---- Nav Links ---- */
@@ -238,10 +238,10 @@
 
 @media screen and (max-width: 480px) {
   .nav-logo img {
-    height: 36px;
+    height: 50px;
   }
 
   .nav-scrolled .nav-logo img {
-    height: 32px;
+    height: 50px;
   }
 }

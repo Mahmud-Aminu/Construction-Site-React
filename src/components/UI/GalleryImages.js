@@ -1,5 +1,4 @@
 import img09 from "../../assets/gallery/IMG-20260602-WA0009.jpg";
-
 import img12 from "../../assets/gallery/IMG-20260602-WA0012.jpg";
 import img13 from "../../assets/gallery/IMG-20260602-WA0013.jpg";
 import img14 from "../../assets/gallery/IMG-20260602-WA0014.jpg";
@@ -15,14 +14,20 @@ import img24 from "../../assets/gallery/IMG-20260602-WA0024.jpg";
 import img25 from "../../assets/gallery/IMG-20260602-WA0025.jpg";
 import img27 from "../../assets/gallery/IMG-20260602-WA0027.jpg";
 import img30 from "../../assets/gallery/IMG-20260602-WA0030.jpg";
-import img31 from "../../assets/gallery/IMG-20260603-WA0009.jpg";
 import img32 from "../../assets/gallery/IMG-20260603-WA0010.jpg";
-import img33 from "../../assets/gallery/IMG-20260603-WA0011.jpg";
 import img34 from "../../assets/gallery/IMG-20260603-WA0012.jpg";
 import img35 from "../../assets/gallery/IMG-20260603-WA0013.jpg";
-import img36 from "../../assets/gallery/IMG-20260603-WA0014.jpg";
-import img37 from "../../assets/gallery/IMG-20260603-WA0015.jpg";
-import img38 from "../../assets/gallery/IMG-20260603-WA0016.jpg";
+import img31 from "../../assets/gallery/IMG-20260603-WA0019.jpg";
+import img36 from "../../assets/gallery/IMG-20260603-WA0020.jpg";
+import img37 from "../../assets/gallery/IMG-20260603-WA0021.jpg";
+import img38 from "../../assets/gallery/IMG-20260603-WA0023.jpg";
+import img39 from "../../assets/gallery/IMG-20260603-WA0024.jpg";
+import img40 from "../../assets/gallery/IMG-20260603-WA0026.jpg";
+import img41 from "../../assets/gallery/IMG-20260603-WA0027.jpg";
+import img42 from "../../assets/gallery/IMG-20260603-WA0028.jpg";
+import img44 from "../../assets/gallery/IMG-20260603-WA0030.jpg";
+import img45 from "../../assets/gallery/IMG-20260603-WA0032.jpg";
+import img46 from "../../assets/gallery/IMG-20260603-WA0033.jpg";
 
 const galleryImages = [
   {
@@ -126,21 +131,9 @@ const galleryImages = [
     category: "Construction",
   },
   {
-    id: 22,
-    src: img31,
-    alt: "Engineering team on site",
-    category: "Engineering",
-  },
-  {
     id: 23,
     src: img32,
     alt: "Road construction machinery",
-    category: "Construction",
-  },
-  {
-    id: 24,
-    src: img33,
-    alt: "Building construction progress",
     category: "Construction",
   },
   {
@@ -157,21 +150,69 @@ const galleryImages = [
   },
   {
     id: 27,
-    src: img36,
-    alt: "Highway construction project",
-    category: "Infrastructure",
-  },
-  {
-    id: 28,
-    src: img37,
-    alt: "Building framework installation",
+    src: img31,
+    alt: "Concrete bed",
     category: "Construction",
   },
   {
+    id: 28,
+    src: img36,
+    alt: "Concrete bed",
+    category: "Framework",
+  },
+  {
     id: 29,
-    src: img38,
+    src: img37,
     alt: "Project supervision on site",
     category: "Engineering",
+  },
+  {
+    id: 30,
+    src: img38,
+    alt: "Concrete bed",
+    category: "Construction",
+  },
+  {
+    id: 31,
+    src: img39,
+    alt: "Project supervision on site",
+    category: "Engineering",
+  },
+  {
+    id: 32,
+    src: img40,
+    alt: "Project supervision on site",
+    category: "Engineering",
+  },
+  {
+    id: 33,
+    src: img41,
+    alt: "Foundation work",
+    category: "Construction",
+  },
+  {
+    id: 34,
+    src: img42,
+    alt: "Concrete bed",
+    category: "Construction",
+  },
+  {
+    id: 36,
+    src: img44,
+    alt: "Project supervision on site",
+    category: "Engineering",
+  },
+  {
+    id: 37,
+    src: img45,
+    alt: "Project supervision on site",
+    category: "Engineering",
+  },
+  {
+    id: 38,
+    src: img46,
+    alt: "Framework on site",
+    category: "Construction",
   },
 ];
 
