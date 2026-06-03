@@ -1,0 +1,127 @@
+/* ============================================
+   DEDICATED GALLERY PAGE HERO & WRAPPER
+   ============================================ */
+.header {
+  margin-bottom: var(--space-3xl);
+}
+
+.galleryPage {
+  background-color: var(--color-bg);
+  min-height: 100vh;
+}
+
+.pageHero {
+  position: relative;
+  padding: 180px 0 110px;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-on-dark);
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.heroBgImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.85) 0%,
+    rgba(15, 81, 50, 0.75) 50%,
+    rgba(15, 23, 42, 0.8) 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* ---- Badge ---- */
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-medium);
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: var(--ls-wide);
+  margin-bottom: var(--space-lg);
+}
+
+.heroBadgeDot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-success);
+  border-radius: var(--radius-full);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* ---- Typography ---- */
+.title {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-extrabold);
+  margin-bottom: var(--space-md);
+  letter-spacing: var(--ls-tight);
+  color: var(--color-text-on-dark);
+  line-height: 1.2;
+}
+
+.heroHighlight {
+  background: linear-gradient(135deg, #16A34A, #2E7D32, #198754);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: var(--fs-body-lg);
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 650px;
+  line-height: var(--lh-relaxed);
+  margin: 0 auto;
+}
+
+/* ---- Responsive ---- */
+@media screen and (max-width: 768px) {
+  .galleryPage {
+    padding-top: 0;
+  }
+
+  .pageHero {
+    padding: 120px 0 var(--space-xl);
+  }
+
+  .title {
+    font-size: clamp(2rem, 6vw, 2.75rem);
+  }
+
+  .subtitle {
+    font-size: var(--fs-body);
+  }
+}

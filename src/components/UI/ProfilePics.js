@@ -1,4 +1,4 @@
-import md from "../../assets/md.png";
+import md from "../../assets/md.jpg";
 import director from "../../assets/director.jpg";
 import profile from "../../assets/profile.jpg";
 import pm from "../../assets/pm.jpg";
@@ -46,7 +46,7 @@ const Teams = [
     id: "4",
     image: pm,
     name: "Sufyanu Maiwada",
-    title: "Head Of Building Department",
+    title: "Head Of Building Construction Department",
     bio: "Sufyanu is a building construction specialist with a dedicated focus on structural execution and project oversight. As department head, he bridges the gap between engineering designs and efficient, large-scale site execution, ensuring that premium quality control and safety protocols are flawlessly met. His technical leadership drives the company's capability to deliver robust, high-performance, and sustainable building infrastructure.",
     socials: {
       linkedin: "https://linkedin.com/company/mantsolha-associates-concept/",

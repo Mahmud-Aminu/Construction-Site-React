@@ -24,7 +24,7 @@ const TeamCard = ({ image, name, title, bio, socials }) => {
         <div className={classes.content}>
           <h3 className={classes.name}>{name}</h3>
           <p className={classes.role}>{title}</p>
-          <div className={classes.socials}>
+          {/* <div className={classes.socials}>
             {socials.linkedin && (
               <a href={socials.linkedin} target="_blank" rel="noreferrer" aria-label={`${name}'s LinkedIn`}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -49,7 +49,7 @@ const TeamCard = ({ image, name, title, bio, socials }) => {
                 </svg>
               </a>
             )}
-          </div>
+          </div> */}
           <button
             className={classes.viewProfileBtn}
             onClick={openModalHandler}
@@ -57,8 +57,8 @@ const TeamCard = ({ image, name, title, bio, socials }) => {
           >
             <span>View Profile</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M5 12h14"/>
-              <path d="M12 5l7 7-7 7"/>
+              <path d="M5 12h14" />
+              <path d="M12 5l7 7-7 7" />
             </svg>
           </button>
         </div>
@@ -88,34 +88,34 @@ const TeamCard = ({ image, name, title, bio, socials }) => {
               <div className={classes.modalIdentity}>
                 <h3 className={classes.modalName}>{name}</h3>
                 <p className={classes.modalRole}>{title}</p>
-                
+
                 {/* Socials inside Modal */}
-                <div className={classes.modalSocials}>
+                {/* <div className={classes.modalSocials}>
                   {socials.linkedin && (
                     <a href={socials.linkedin} target="_blank" rel="noreferrer" aria-label={`${name}'s LinkedIn`}>
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                        <rect x="2" y="9" width="4" height="12"/>
-                        <circle cx="4" cy="4" r="2"/>
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <rect x="2" y="9" width="4" height="12" />
+                        <circle cx="4" cy="4" r="2" />
                       </svg>
                     </a>
                   )}
                   {socials.twitter && (
                     <a href={socials.twitter} target="_blank" rel="noreferrer" aria-label={`${name}'s Twitter`}>
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+                        <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
                       </svg>
                     </a>
                   )}
                   {socials.email && (
                     <a href={socials.email} aria-label={`Email ${name}`}>
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                        <polyline points="22,6 12,13 2,6"/>
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
                       </svg>
                     </a>
                   )}
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -167,7 +167,7 @@ const Teams = () => {
           <span className="section-label reveal">Leadership Team</span>
           <h2 className="section-title reveal stagger-1">Meet Our Experts</h2>
           <p className="section-subtitle reveal stagger-2">
-            A dedicated team of licensed engineering consultants, construction supervisors, 
+            A dedicated team of licensed engineering consultants, construction supervisors,
             and project delivery experts.
           </p>
         </div>

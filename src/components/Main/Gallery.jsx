@@ -71,24 +71,13 @@ const Gallery = () => {
       ref={sectionRef}
     >
       <div className="container">
-        {/* ---- Section Header ---- */}
-        <div className={`text-center ${classes.header}`}>
-          <span className="section-label reveal">Our Portfolio</span>
-          <h2 className="section-title reveal stagger-1">Project Gallery</h2>
-          <p className="section-subtitle reveal stagger-2">
-            A visual showcase of our construction excellence, engineering
-            precision, and infrastructure milestones across Nigeria.
-          </p>
-        </div>
-
         {/* ---- Category Filters ---- */}
         <div className={`${classes.filters} reveal stagger-3`}>
           {categories.map((cat) => (
             <button
               key={cat}
-              className={`${classes.filterBtn} ${
-                activeFilter === cat ? classes.filterActive : ""
-              }`}
+              className={`${classes.filterBtn} ${activeFilter === cat ? classes.filterActive : ""
+                }`}
               onClick={() => handleFilterChange(cat)}
             >
               {cat}
@@ -99,13 +88,8 @@ const Gallery = () => {
           ))}
         </div>
 
-        {/* ---- Image Counter ---- */}
-        <div className={`${classes.counter} reveal stagger-3`}>
-          <span className={classes.counterNumber}>{filteredImages.length}</span>
-          <span className={classes.counterLabel}>
-            {activeFilter === "All" ? "Total Projects" : `${activeFilter} Projects`}
-          </span>
-        </div>
+
+
 
         {/* ---- Gallery Grid ---- */}
         <div

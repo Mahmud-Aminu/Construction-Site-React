@@ -1,12 +1,16 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./Navigation.css";
 
 const logo = "/micon2.png";
-const logo2 = "/micon.png"
+const logo2 = "/micon.png";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,13 +45,40 @@ export default function Navigation() {
     setIsMobileMenuOpen(false);
   }, []);
 
-  const scrollToSection = useCallback((sectionId) => {
+  const handleNavClick = useCallback((e, sectionId) => {
+    e.preventDefault();
     closeMobileMenu();
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+
+    if (sectionId === "gallery") {
+      if (location.pathname === "/gallery") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        navigate("/gallery");
+      }
+    } else {
+      if (location.pathname === "/") {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        navigate(`/#${sectionId}`);
+      }
     }
-  }, [closeMobileMenu]);
+  }, [location.pathname, navigate, closeMobileMenu]);
+
+  const handleLogoClick = useCallback((e) => {
+    e.preventDefault();
+    closeMobileMenu();
+    if (location.pathname === "/") {
+      const element = document.getElementById("hero");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      navigate("/");
+    }
+  }, [location.pathname, navigate, closeMobileMenu]);
 
   const navLinks = [
     { label: "Home", id: "hero" },
@@ -62,39 +93,32 @@ export default function Navigation() {
   return (
     <header className={`nav-header ${isScrolled ? "nav-scrolled" : ""}`}>
       <nav className="nav-container" aria-label="Main navigation">
-        {isScrolled ?
+        {isScrolled ? (
           <a
-            href="#hero"
+            href="/"
             className="nav-logo"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection("hero");
-            }}
+            onClick={handleLogoClick}
             aria-label="Mantsolha Associates - Go to homepage"
           >
             <img src={logo} alt="Mantsolha Associates Concept Ltd" />
           </a>
-          : <a
-            href="#hero"
+        ) : (
+          <a
+            href="/"
             className="nav-logo"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection("hero");
-            }}
+            onClick={handleLogoClick}
             aria-label="Mantsolha Associates - Go to homepage"
           >
             <img src={logo2} alt="Mantsolha Associates Concept Ltd" />
-          </a>}
+          </a>
+        )}
         <ul className={`nav-links ${isMobileMenuOpen ? "nav-links--open" : ""}`}>
           {navLinks.map((link) => (
             <li key={link.id}>
               <a
-                href={`#${link.id}`}
+                href={link.id === "gallery" ? "/gallery" : `/#${link.id}`}
                 className="nav-link"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(link.id);
-                }}
+                onClick={(e) => handleNavClick(e, link.id)}
               >
                 {link.label}
               </a>
@@ -104,10 +128,7 @@ export default function Navigation() {
             <a
               href="#contact"
               className="nav-cta"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("contact");
-              }}
+              onClick={(e) => handleNavClick(e, "contact")}
             >
               Get Consultation
             </a>
@@ -117,10 +138,7 @@ export default function Navigation() {
         <a
           href="#contact"
           className="nav-cta nav-cta-desktop"
-          onClick={(e) => {
-            e.preventDefault();
-            scrollToSection("contact");
-          }}
+          onClick={(e) => handleNavClick(e, "contact")}
         >
           Get Consultation
         </a>
