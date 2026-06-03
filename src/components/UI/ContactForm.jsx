@@ -70,10 +70,10 @@ const ContactForm = () => {
 
     emailjs
       .sendForm(
-        process.env.REACT_APP_EMAIL_JS_SERVICE_ID || "service_default",
-        process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID || "template_default",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_default",
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_default",
         form.current,
-        process.env.REACT_APP_EMAIL_JS_PUBLIC_ID || "public_default"
+        import.meta.env.VITE_EMAILJS_PUBLIC_ID || "public_default"
       )
       .then(
         (result) => {

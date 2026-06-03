@@ -1,11 +1,9 @@
 import img09 from "../../assets/gallery/IMG-20260602-WA0009.jpg";
-import img10 from "../../assets/gallery/IMG-20260602-WA0010.jpg";
-import img11 from "../../assets/gallery/IMG-20260602-WA0011.jpg";
+
 import img12 from "../../assets/gallery/IMG-20260602-WA0012.jpg";
 import img13 from "../../assets/gallery/IMG-20260602-WA0013.jpg";
 import img14 from "../../assets/gallery/IMG-20260602-WA0014.jpg";
 import img15 from "../../assets/gallery/IMG-20260602-WA0015.jpg";
-import img16 from "../../assets/gallery/IMG-20260602-WA0016.jpg";
 import img17 from "../../assets/gallery/IMG-20260602-WA0017.jpg";
 import img18 from "../../assets/gallery/IMG-20260602-WA0018.jpg";
 import img19 from "../../assets/gallery/IMG-20260602-WA0019.jpg";
@@ -16,7 +14,6 @@ import img23 from "../../assets/gallery/IMG-20260602-WA0023.jpg";
 import img24 from "../../assets/gallery/IMG-20260602-WA0024.jpg";
 import img25 from "../../assets/gallery/IMG-20260602-WA0025.jpg";
 import img27 from "../../assets/gallery/IMG-20260602-WA0027.jpg";
-import img28 from "../../assets/gallery/IMG-20260602-WA0028.jpg";
 import img30 from "../../assets/gallery/IMG-20260602-WA0030.jpg";
 import img31 from "../../assets/gallery/IMG-20260603-WA0009.jpg";
 import img32 from "../../assets/gallery/IMG-20260603-WA0010.jpg";
@@ -29,23 +26,24 @@ import img38 from "../../assets/gallery/IMG-20260603-WA0016.jpg";
 
 const galleryImages = [
   {
+    id: 10,
+    src: img18,
+    alt: "Road pavement construction",
+    category: "Infrastructure",
+  },
+  {
     id: 1,
     src: img09,
     alt: "Construction project site overview",
     category: "Construction",
   },
   {
-    id: 2,
-    src: img10,
-    alt: "Road infrastructure development",
-    category: "Infrastructure",
+    id: 15,
+    src: img23,
+    alt: "Structural engineering work",
+    category: "Engineering",
   },
-  {
-    id: 3,
-    src: img11,
-    alt: "Building construction progress",
-    category: "Construction",
-  },
+
   {
     id: 4,
     src: img12,
@@ -71,23 +69,12 @@ const galleryImages = [
     category: "Infrastructure",
   },
   {
-    id: 8,
-    src: img16,
-    alt: "Building framework installation",
-    category: "Construction",
-  },
-  {
     id: 9,
     src: img17,
     alt: "Project supervision on site",
     category: "Engineering",
   },
-  {
-    id: 10,
-    src: img18,
-    alt: "Road pavement construction",
-    category: "Infrastructure",
-  },
+
   {
     id: 11,
     src: img19,
@@ -112,12 +99,7 @@ const galleryImages = [
     alt: "Engineering team coordination",
     category: "Engineering",
   },
-  {
-    id: 15,
-    src: img23,
-    alt: "Structural engineering work",
-    category: "Engineering",
-  },
+
   {
     id: 16,
     src: img24,
@@ -136,12 +118,7 @@ const galleryImages = [
     alt: "Bridge and road infrastructure",
     category: "Infrastructure",
   },
-  {
-    id: 19,
-    src: img28,
-    alt: "Large-scale building project",
-    category: "Construction",
-  },
+
   {
     id: 21,
     src: img30,

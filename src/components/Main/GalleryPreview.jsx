@@ -7,8 +7,8 @@ import classes from "./GalleryPreview.module.css";
 const GalleryPreview = () => {
   const sectionRef = useScrollReveal();
   
-  // Show first 4 images for the preview
-  const previewImages = galleryImages.slice(0, 4);
+  // Show first 3 images for the preview
+  const previewImages = galleryImages.slice(0, 3);
 
   return (
     <section className={`section ${classes.previewSection}`} id="gallery-preview" ref={sectionRef}>
