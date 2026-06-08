@@ -3,13 +3,13 @@ import emailjs from "@emailjs/browser";
 import classes from "./ContactForm.module.css";
 
 const services = [
-  "Civil Engineering",
+  "Civil Engineering Construction",
   "Structural Design",
-  "Construction Management",
+  "Construction",
   "Project Consultancy",
   "Quantity Surveying",
   "Project Supervision",
-  "Other Engineering Service"
+  "Other Service"
 ];
 
 const ContactForm = () => {
